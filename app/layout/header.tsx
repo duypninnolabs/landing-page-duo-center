@@ -150,14 +150,15 @@ export default function Header() {
           ))}
 
           {/* CTA */}
-      <Link
+   <Link
             href="#form-section"
             className="inline-block px-7 py-3
             cursor-pointer
-            sm:px-8 sm:py-4 rounded-full bg-primary text-white font-semibold shadow-lg hover:scale-105 transition"
+            sm:px-8 sm:py-4 rounded-[10px] bg-primary text-white font-semibold hover:scale-105 transition"
           >
           Tư Vấn Ngay
           </Link>
+
         </div>
       </div>
     </header>
