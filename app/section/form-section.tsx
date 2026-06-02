@@ -78,9 +78,9 @@ export default function FormSection() {
 
       const result = await res.json();
 
-      if (result.success) {
-          window.fbq?.("track", "Lead");
+      if (result.success) {        window.fbq?.("track", "Lead");
 
+        console.log("RESULT:", result);
         setStatus("Đăng ký thành công! Trung tâm sẽ liên hệ tư vấn sớm.");
         form.reset();
       } else {
