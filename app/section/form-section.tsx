@@ -79,9 +79,10 @@ export default function FormSection() {
       const result = await res.json();
 
       if (result.success) {       
-      if (result.success) {
+ console.log("RESULT:", result);
+
   const fireLead = () => {
-    if (window.fbq) {
+    if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead");
       console.log("🔥 LEAD SENT");
     } else {
@@ -90,11 +91,6 @@ export default function FormSection() {
   };
 
   fireLead();
-
-  setStatus("Đăng ký thành công!");
-  form.reset();
-}
-
         console.log("RESULT:", result);
         setStatus("Đăng ký thành công! Trung tâm sẽ liên hệ tư vấn sớm.");
         form.reset();
