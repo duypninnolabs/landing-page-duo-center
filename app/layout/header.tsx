@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
@@ -89,9 +90,14 @@ export default function Header() {
         </div>
 
         {/* CTA Desktop */}
-        <button className="hidden md:block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-container transition">
-          Tư vấn ngay
-        </button>
+       <Link
+            href="#form-section"
+            className="inline-block px-7 py-3
+            cursor-pointer
+            sm:px-8 sm:py-4 rounded-[10px] bg-primary text-white font-semibold hover:scale-105 transition"
+          >
+          Tư Vấn Ngay
+          </Link>
 
         {/* ================= HAMBURGER ================= */}
         <button
@@ -144,9 +150,14 @@ export default function Header() {
           ))}
 
           {/* CTA */}
-          <button className="mt-4 bg-primary text-white py-3 rounded-lg">
-            Tư vấn ngay
-          </button>
+      <Link
+            href="#form-section"
+            className="inline-block px-7 py-3
+            cursor-pointer
+            sm:px-8 sm:py-4 rounded-full bg-primary text-white font-semibold shadow-lg hover:scale-105 transition"
+          >
+          Tư Vấn Ngay
+          </Link>
         </div>
       </div>
     </header>
