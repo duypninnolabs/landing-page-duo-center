@@ -1,5 +1,9 @@
 "use client";
-
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+  }
+}
 import React, { useEffect, useRef, useState } from "react";
 
 export default function FormSection() {
@@ -75,6 +79,8 @@ export default function FormSection() {
       const result = await res.json();
 
       if (result.success) {
+          window.fbq?.("track", "Lead");
+
         setStatus("Đăng ký thành công! Trung tâm sẽ liên hệ tư vấn sớm.");
         form.reset();
       } else {
