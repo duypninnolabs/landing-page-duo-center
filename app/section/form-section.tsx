@@ -175,7 +175,7 @@ export default function FormSection() {
 
               <input
                 name="phone"
-                type="tel"
+                type="number"
                 placeholder="Số điện thoại"
                 className="w-full mt-1 h-11 sm:h-12 rounded-lg border border-gray-300 px-4 focus:border-primary focus:ring-2 focus:ring-primary/30 outline-none transition"
                 required
